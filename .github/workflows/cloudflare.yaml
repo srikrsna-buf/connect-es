@@ -10,7 +10,7 @@ on:
 jobs:
   test:
     if: github.event_name != 'pull_request' || startsWith(github.event.pull_request.title, 'Release ')
-    runs-on: ubuntu-22.04
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
       - uses: bufbuild/buf-setup-action@v1.29.0
