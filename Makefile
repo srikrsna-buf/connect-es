@@ -225,6 +225,7 @@ testnodeconformance: $(BIN)/node16 $(BIN)/node18 $(BIN)/node20 $(BIN)/node21 $(B
 .PHONY: testcloudflareconformance
 testcloudflareconformance: $(BUILD)/connect-conformance
 	npm run -w packages/connect-conformance test:cloudflare:server
+	npm run -w packages/connect-conformance test:cloudflare:client
 
 .PHONY: testwebnode
 testwebnode: $(BIN)/node18 $(BIN)/node20 $(BIN)/node21 $(BUILD)/connect-web-test
